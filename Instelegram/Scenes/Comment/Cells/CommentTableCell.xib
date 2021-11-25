@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="CommentTableCell" customModule="Instelegram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="505" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="505" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4Wm-1A-AR9">
+                        <rect key="frame" x="8" y="8" width="489" height="104"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-kt-U4O">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8po-tc-23B"/>
+                                    <constraint firstAttribute="width" secondItem="rAC-kt-U4O" secondAttribute="height" multiplier="1:1" id="IbX-Gv-Ip4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd2-So-hBp">
+                                <rect key="frame" x="44" y="0.0" width="346" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdasd asjdl ajskld " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMK-TD-h1l">
+                                        <rect key="frame" x="8" y="0.0" width="338" height="85"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zMK-TD-h1l" firstAttribute="leading" secondItem="gd2-So-hBp" secondAttribute="leading" constant="8" id="gi8-rg-xmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="zMK-TD-h1l" secondAttribute="trailing" id="haa-Km-K3l"/>
+                                    <constraint firstItem="zMK-TD-h1l" firstAttribute="top" secondItem="gd2-So-hBp" secondAttribute="top" id="mSW-Xu-BKf"/>
+                                    <constraint firstAttribute="bottom" secondItem="zMK-TD-h1l" secondAttribute="bottom" id="phm-Ax-1od"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutes ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLB-r5-Vuk">
+                                <rect key="frame" x="394" y="0.0" width="95" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="zTu-o7-1OD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4Wm-1A-AR9" secondAttribute="bottom" id="Pkp-T2-A5L"/>
+                    <constraint firstItem="4Wm-1A-AR9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="m5V-Q3-FxS"/>
+                    <constraint firstAttribute="trailing" secondItem="4Wm-1A-AR9" secondAttribute="trailing" constant="8" id="rQd-DX-g39"/>
+                    <constraint firstItem="4Wm-1A-AR9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zhJ-D4-7Jj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentLabel" destination="zMK-TD-h1l" id="T9d-BE-KVw"/>
+                <outlet property="timeAgoLabel" destination="YLB-r5-Vuk" id="XS2-0X-2cJ"/>
+                <outlet property="userImageView" destination="rAC-kt-U4O" id="SeI-aI-ns6"/>
+            </connections>
+            <point key="canvasLocation" x="-118.11594202898551" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

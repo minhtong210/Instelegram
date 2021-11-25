@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="A97-dH-2Oe">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="Dla-ZP-sSb" customClass="ChatViewController" customModule="Instelegram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSD-Yt-9lq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFP-Yq-5z4">
+                                <rect key="frame" x="16" y="52" width="62" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" name="YellowColor"/>
+                                <state key="normal" title=" Back">
+                                    <color key="titleColor" name="YellowColor"/>
+                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="medium"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-4N-0N2">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-WR-cYO">
+                                        <rect key="frame" x="12" y="20" width="330" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nhk-Vx-23v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXw-x0-0Gv">
+                                        <rect key="frame" x="354" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tXw-x0-0Gv" secondAttribute="height" multiplier="1:1" id="JRB-3g-ga2"/>
+                                            <constraint firstAttribute="height" constant="40" id="jz5-mc-6z8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="paperplane.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="YellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="kE8-WR-cYO" firstAttribute="top" secondItem="aeF-4N-0N2" secondAttribute="top" constant="20" id="C9T-u9-oHv"/>
+                                    <constraint firstItem="kE8-WR-cYO" firstAttribute="leading" secondItem="aeF-4N-0N2" secondAttribute="leading" constant="12" id="JVb-jt-Wp0"/>
+                                    <constraint firstAttribute="height" constant="100" id="eUE-GJ-TNj"/>
+                                    <constraint firstItem="tXw-x0-0Gv" firstAttribute="top" secondItem="aeF-4N-0N2" secondAttribute="top" constant="20" id="gxe-9g-YQj"/>
+                                    <constraint firstItem="tXw-x0-0Gv" firstAttribute="leading" secondItem="kE8-WR-cYO" secondAttribute="trailing" constant="12" id="sAQ-Pg-K9h"/>
+                                    <constraint firstAttribute="trailing" secondItem="tXw-x0-0Gv" secondAttribute="trailing" constant="20" id="y3D-e8-Ups"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uFS-Ym-aC2">
+                                <rect key="frame" x="0.0" y="90" width="414" height="706"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIs-oT-pEk">
+                                <rect key="frame" x="182.5" y="50" width="49.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KjK-kP-FqI"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UFP-Yq-5z4" firstAttribute="leading" secondItem="KjK-kP-FqI" secondAttribute="leading" constant="16" id="2NG-N6-Hom"/>
+                            <constraint firstItem="eIs-oT-pEk" firstAttribute="centerY" secondItem="UFP-Yq-5z4" secondAttribute="centerY" id="HvX-F5-wOe"/>
+                            <constraint firstItem="aeF-4N-0N2" firstAttribute="trailing" secondItem="KjK-kP-FqI" secondAttribute="trailing" id="LKk-ct-oGr"/>
+                            <constraint firstItem="uFS-Ym-aC2" firstAttribute="leading" secondItem="KjK-kP-FqI" secondAttribute="leading" id="WmR-9d-hnS"/>
+                            <constraint firstItem="aeF-4N-0N2" firstAttribute="leading" secondItem="KjK-kP-FqI" secondAttribute="leading" id="cgP-Bf-uP3"/>
+                            <constraint firstItem="aeF-4N-0N2" firstAttribute="top" secondItem="uFS-Ym-aC2" secondAttribute="bottom" id="dvm-I7-8Fp"/>
+                            <constraint firstItem="UFP-Yq-5z4" firstAttribute="top" secondItem="KjK-kP-FqI" secondAttribute="top" constant="8" id="i4G-bc-dhr"/>
+                            <constraint firstItem="aeF-4N-0N2" firstAttribute="bottom" secondItem="nSD-Yt-9lq" secondAttribute="bottom" id="icV-c4-ak2"/>
+                            <constraint firstItem="uFS-Ym-aC2" firstAttribute="top" secondItem="UFP-Yq-5z4" secondAttribute="bottom" constant="16" id="lyC-Yd-zdP"/>
+                            <constraint firstItem="eIs-oT-pEk" firstAttribute="centerX" secondItem="nSD-Yt-9lq" secondAttribute="centerX" id="qaE-yv-uyK"/>
+                            <constraint firstItem="KjK-kP-FqI" firstAttribute="trailing" secondItem="uFS-Ym-aC2" secondAttribute="trailing" id="uBY-py-0rG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="UFP-Yq-5z4" id="Csd-nH-svb"/>
+                        <outlet property="messageTextField" destination="kE8-WR-cYO" id="Zf3-w5-8lu"/>
+                        <outlet property="sendButton" destination="tXw-x0-0Gv" id="l4x-v5-aRq"/>
+                        <outlet property="tableView" destination="uFS-Ym-aC2" id="FYX-MW-mbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNT-1k-FzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <namedColor name="YellowColor">
+            <color red="0.99000000953674316" green="0.75" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
