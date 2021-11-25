@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FOK-qS-OQ8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="124-hi-gAa">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="FOK-qS-OQ8" customClass="SearchViewController" customModule="Instelegram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="imM-QN-yNh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bYM-9r-nUz">
+                                <rect key="frame" x="0.0" y="44" width="342" height="51"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZX-dL-Ijn">
+                                <rect key="frame" x="354" y="54.5" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="YellowColor"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-84-jy1">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eut-Ui-TlC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bYM-9r-nUz" firstAttribute="top" secondItem="eut-Ui-TlC" secondAttribute="top" id="2Mf-1H-Cfg"/>
+                            <constraint firstItem="DZX-dL-Ijn" firstAttribute="leading" secondItem="bYM-9r-nUz" secondAttribute="trailing" constant="12" id="2mv-F6-7au"/>
+                            <constraint firstItem="DZX-dL-Ijn" firstAttribute="centerY" secondItem="bYM-9r-nUz" secondAttribute="centerY" id="48R-HS-bWs"/>
+                            <constraint firstItem="eut-Ui-TlC" firstAttribute="trailing" secondItem="DZX-dL-Ijn" secondAttribute="trailing" constant="12" id="EZd-K5-sC3"/>
+                            <constraint firstItem="DZX-dL-Ijn" firstAttribute="height" secondItem="bYM-9r-nUz" secondAttribute="height" multiplier="0.588235" id="EmN-sh-u3J"/>
+                            <constraint firstItem="rfG-84-jy1" firstAttribute="top" secondItem="bYM-9r-nUz" secondAttribute="bottom" id="dZQ-3P-rbZ"/>
+                            <constraint firstItem="eut-Ui-TlC" firstAttribute="bottom" secondItem="rfG-84-jy1" secondAttribute="bottom" id="gLw-Ws-X90"/>
+                            <constraint firstItem="bYM-9r-nUz" firstAttribute="leading" secondItem="eut-Ui-TlC" secondAttribute="leading" id="iQV-S4-U8H"/>
+                            <constraint firstItem="rfG-84-jy1" firstAttribute="leading" secondItem="eut-Ui-TlC" secondAttribute="leading" id="kgX-pd-QEg"/>
+                            <constraint firstItem="eut-Ui-TlC" firstAttribute="trailing" secondItem="rfG-84-jy1" secondAttribute="trailing" id="z1J-pI-DMK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="DZX-dL-Ijn" id="skC-uq-maU"/>
+                        <outlet property="searchBar" destination="bYM-9r-nUz" id="syv-cf-VXN"/>
+                        <outlet property="tableView" destination="rfG-84-jy1" id="Utu-T1-bmP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P77-ME-mzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-315.94202898550725" y="21.428571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="YellowColor">
+            <color red="0.99000000953674316" green="0.75" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
